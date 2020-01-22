@@ -7,7 +7,7 @@ spring :
       enabled: false
         
 server :
-  port : 8801
+  port : 8802
   
   
 eureka:
