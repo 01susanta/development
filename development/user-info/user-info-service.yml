@@ -1,0 +1,24 @@
+spring :
+  application :
+    name : user-info-service
+  cloud :
+   loadbalancer :
+    ribbon :
+      enabled: false
+   config:
+    allow-override: true
+    override-none: true
+  
+        
+server :
+  port : 8901
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8700/eureka    
+    
