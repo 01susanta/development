@@ -1,0 +1,17 @@
+spring:
+   cloud:
+      loadbalancer:
+         ribbon:
+            enabled: false
+
+server:
+   port: 8700
+eureka:
+  instance:
+    hostname: user-eureka-discovery-service-nd-1
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://${spring.application.name}:${server.port}/eureka
+      
