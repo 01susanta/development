@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: user-address-service
   cloud:
     loadbalancer:
       ribbon:
@@ -9,6 +11,7 @@ server:
 eureka:
   instance:
     hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     fetch-registry: true
     register-with-eureka: true
