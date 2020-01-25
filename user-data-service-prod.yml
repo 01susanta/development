@@ -1,11 +1,11 @@
-spring :
-  cloud :
-   loadbalancer :
-    ribbon :
+spring:
+  cloud:
+   loadbalancer:
+    ribbon:
       enabled: false
         
-server :
-  port : 0
+server:
+  port: 0
   
 eureka:
   instance:
@@ -14,6 +14,13 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8700/eureka    
+      defaultZone: http://localhost:8700/eureka 
+      
+      
+db:
+ name: mysql
+ schema: userdata
+ username: produser
+ password: prodpass
     
   
