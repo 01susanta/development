@@ -1,0 +1,38 @@
+spring:
+  application :
+    name : user-data-service
+  cloud:
+   loadbalancer:
+    ribbon:
+      enabled: false
+  
+        
+server:
+  port: 0
+  
+eureka:
+  instance:
+    hostname: localhost
+    --instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8700/eureka 
+      
+      
+db:
+ name: mysql
+ schema: userdata
+ username: produser
+ password: prodpass
+ 
+ 
+ opentracing:
+  jaeger:
+    http-sender:
+      url: http://localhost:14269/api/traces
+    probabilistic-sampler:
+      sampling-rate: 1.0
+    
+  
