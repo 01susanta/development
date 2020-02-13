@@ -27,6 +27,12 @@ eureka:
       defaultZone: http://localhost:8700/eureka 
       
       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      
 db:
  name: mysql
  schema: userdata
